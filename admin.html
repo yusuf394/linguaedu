@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linguaedu | Admin Artikel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo">Lingua<span>edu</span></a>
+      <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+      <nav class="menu" id="menu">
+        <a href="index.html#tentang">Tentang</a>
+        <a href="index.html#belajar">Belajar</a>
+        <a href="articles.html">Artikel</a>
+        <a href="admin.html" class="btn btn-sm">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="content-shell">
+      <div class="container admin-wrap">
+        <div class="admin-panel">
+          <h1>Admin artikel</h1>
+          <p>Form ini cocok untuk uji coba. Artikel akan disimpan di browser untuk demo awal.</p>
+          <form id="articleForm" class="admin-form">
+            <label>
+              Judul
+              <input type="text" name="title" required>
+            </label>
+            <label>
+              Kategori
+              <input type="text" name="category" value="Bahasa Indonesia" required>
+            </label>
+            <label>
+              Tanggal
+              <input type="date" name="date" required>
+            </label>
+            <label>
+              Ringkasan
+              <textarea name="excerpt" rows="3" required></textarea>
+            </label>
+            <label>
+              Isi artikel
+              <textarea name="content" rows="8" required></textarea>
+            </label>
+            <button type="submit" class="btn">Simpan artikel</button>
+          </form>
+        </div>
+
+        <div class="admin-panel alt-panel">
+          <h2>Artikel yang tersimpan</h2>
+          <ul id="adminList" class="admin-list"></ul>
+          <p class="note-box">Untuk versi GitHub yang lebih profesional, file artikel bisa dikelola di repo GitHub dan diupdate melalui pull request atau file JSON.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container foot">
+      <span>© <span id="year"></span> Linguaedu</span>
+      <span class="social">
+        <a href="articles.html">Artikel</a>
+        <a href="youtube.html">YouTube</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="articles.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

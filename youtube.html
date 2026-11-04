@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linguaedu | YouTube</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo">Lingua<span>edu</span></a>
+      <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+      <nav class="menu" id="menu">
+        <a href="index.html#tentang">Tentang</a>
+        <a href="index.html#belajar">Belajar</a>
+        <div class="has-sub">
+          <a href="index.html#media">Media</a>
+          <div class="sub">
+            <a href="youtube.html">YouTube</a>
+            <a href="podcast.html">Podcast</a>
+          </div>
+        </div>
+        <a href="index.html#aplikasi">Aplikasi</a>
+        <a href="index.html#kontak" class="btn btn-sm">Hubungi kami</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero media-page-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">YouTube</span>
+          <h1>Video pembelajaran yang jelas dan mudah dipahami.</h1>
+          <p class="lead">Temukan materi edukasi dalam format video yang ringkas, visual, dan siap membantu belajar lebih efektif.</p>
+          <div class="actions">
+            <a href="#featured" class="btn">Lihat video utama</a>
+            <a href="index.html" class="btn btn-line">Kembali ke beranda</a>
+          </div>
+        </div>
+        <div class="hero-visual media-hero-visual">
+          <div class="mini-player">
+            <span class="play-badge">▶</span>
+            <div>
+              <small>Video terbaru</small>
+              <strong>Belajar bahasa dengan praktik</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured" class="content-shell">
+      <div class="container">
+        <div class="section-head">
+          <h2>Video unggulan</h2>
+          <span>Rekomendasi hari ini</span>
+        </div>
+        <div class="feature-frame">
+          <div class="embed yt" id="youtube"></div>
+        </div>
+        <div class="actions">
+          <a class="btn" id="yt-open" hidden target="_blank" rel="noopener noreferrer">Buka di YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-shell alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Playlist terbaru</h2>
+          <span>12 video</span>
+        </div>
+        <div class="media-grid cards-grid">
+          <article class="video-card">
+            <div class="thumb thumb-one"><span>▶</span></div>
+            <div class="card-body">
+              <small>Bahasa</small>
+              <h3>Menulis kalimat efektif untuk tugas sekolah</h3>
+              <p>7 menit · 1.2K tayangan</p>
+            </div>
+          </article>
+          <article class="video-card">
+            <div class="thumb thumb-two"><span>▶</span></div>
+            <div class="card-body">
+              <small>Literasi</small>
+              <h3>Cara membaca teks dengan fokus dan konsisten</h3>
+              <p>8 menit · 960 tayangan</p>
+            </div>
+          </article>
+          <article class="video-card">
+            <div class="thumb thumb-three"><span>▶</span></div>
+            <div class="card-body">
+              <small>Metodologi</small>
+              <h3>Strategi belajar mandiri yang tidak mudah menyerah</h3>
+              <p>10 menit · 1.5K tayangan</p>
+            </div>
+          </article>
+          <article class="video-card">
+            <div class="thumb thumb-four"><span>▶</span></div>
+            <div class="card-body">
+              <small>Pelatihan</small>
+              <h3>Menyiapkan presentasi yang lebih percaya diri</h3>
+              <p>9 menit · 890 tayangan</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container foot">
+      <span>© <span id="year"></span> Linguaedu</span>
+      <span class="social">
+        <a href="youtube.html">YouTube</a>
+        <a href="podcast.html">Spotify</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
