@@ -158,3 +158,43 @@ const CONFIG = {
     if (a && CONFIG[k]) { a.href = CONFIG[k]; a.hidden = false; }
   });
 })();
+
+/* Slideshow latar hero: otomatis ganti, bisa diklik titiknya, bisa digeser di HP */
+(() => {
+  const slides = [...document.querySelectorAll(".hero-slide")];
+  const dotsBox = document.querySelector(".hero-dots");
+  const hero = document.querySelector(".hero");
+  if (slides.length < 2 || !dotsBox || !hero) return;
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const INTERVAL = 6000; // ms, ubah untuk mempercepat atau memperlambat
+  let i = 0, timer, x0 = null;
+
+  const go = n => {
+    i = (n + slides.length) % slides.length;
+    slides.forEach((s, k) => s.classList.toggle("active", k === i));
+    dots.forEach((d, k) => d.classList.toggle("active", k === i));
+  };
+  const play = () => { clearInterval(timer); if (!reduce) timer = setInterval(() => go(i + 1), INTERVAL); };
+
+  const dots = slides.map((_, n) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("aria-label", "Gambar " + (n + 1));
+    b.addEventListener("click", () => { go(n); play(); });
+    dotsBox.appendChild(b);
+    return b;
+  });
+
+  hero.addEventListener("mouseenter", () => clearInterval(timer));
+  hero.addEventListener("mouseleave", play);
+  hero.addEventListener("touchstart", e => { x0 = e.touches[0].clientX; }, { passive: true });
+  hero.addEventListener("touchend", e => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 50) { go(i + (dx < 0 ? 1 : -1)); play(); }
+    x0 = null;
+  });
+
+  go(0);
+  play();
+})();
