@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linguaedu | Podcast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo">Lingua<span>edu</span></a>
+      <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+      <nav class="menu" id="menu">
+        <a href="index.html#tentang">Tentang</a>
+        <a href="index.html#belajar">Belajar</a>
+        <div class="has-sub">
+          <a href="index.html#media">Media</a>
+          <div class="sub">
+            <a href="youtube.html">YouTube</a>
+            <a href="podcast.html">Podcast</a>
+          </div>
+        </div>
+        <a href="index.html#aplikasi">Aplikasi</a>
+        <a href="index.html#kontak" class="btn btn-sm">Hubungi kami</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero media-page-hero podcast-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Spotify Podcast</span>
+          <h1>Belajar sambil mendengar, kapan pun dan di mana pun.</h1>
+          <p class="lead">Dengarkan episode yang membahas bahasa, literasi, dan strategi pembelajaran dalam format ringan dan inspiratif.</p>
+          <div class="actions">
+            <a href="#player" class="btn">Dengarkan sekarang</a>
+            <a href="index.html" class="btn btn-line">Kembali ke beranda</a>
+          </div>
+        </div>
+        <div class="hero-visual media-hero-visual podcast-visual">
+          <div class="mini-player mini-podcast">
+            <span class="play-badge">♫</span>
+            <div>
+              <small>Episode terbaru</small>
+              <strong>Menulis dengan percaya diri</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="player" class="content-shell">
+      <div class="container">
+        <div class="section-head">
+          <h2>Now playing</h2>
+          <span>Podcast studio</span>
+        </div>
+        <div class="spotify-frame">
+          <div class="embed sp" id="spotify"></div>
+        </div>
+        <div class="actions">
+          <a class="btn" id="sp-open" hidden target="_blank" rel="noopener noreferrer">Buka di Spotify</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-shell alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Episode populer</h2>
+          <span>7 episode</span>
+        </div>
+        <div class="podcast-list">
+          <article class="podcast-item">
+            <div class="podcast-cover cover-one"><span>♫</span></div>
+            <div>
+              <small>Bahasa</small>
+              <h3>Tips menulis dengan alur yang lebih rapi</h3>
+              <p>19 menit · 12 Oktober 2026</p>
+            </div>
+          </article>
+          <article class="podcast-item">
+            <div class="podcast-cover cover-two"><span>♫</span></div>
+            <div>
+              <small>Literasi</small>
+              <h3>Menjaga fokus saat membaca dan belajar mandiri</h3>
+              <p>24 menit · 03 Oktober 2026</p>
+            </div>
+          </article>
+          <article class="podcast-item">
+            <div class="podcast-cover cover-three"><span>♫</span></div>
+            <div>
+              <small>Motivasi</small>
+              <h3>Bagaimana membangun kebiasaan belajar konsisten</h3>
+              <p>17 menit · 22 September 2026</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container foot">
+      <span>© <span id="year"></span> Linguaedu</span>
+      <span class="social">
+        <a href="youtube.html">YouTube</a>
+        <a href="podcast.html">Spotify</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
